@@ -6,20 +6,13 @@ import {AddEditTransactionsPage} from '../add-edit-transactions/add-edit-transac
 })
 export class Dashboard {
 
-  static get parameters() {
-    return [[NavController], [NavParams]];
-  }
 
-
-  constructor(nav, navParams) {
-    this.nav = nav;
-    this.addEditTransaction = AddEditTransactionsPage;
-
+  constructor(public nav: NavController) {
 
   }
 
   addTransaction(event, item){
-  	    this.nav.push(this.addEditTransaction,{},{});
+  	    this.nav.push(AddEditTransactionsPage,{},{});
 
   }
 }
